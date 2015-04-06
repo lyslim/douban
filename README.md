@@ -38,7 +38,7 @@ Enjoy!
 Reference:
 
 1. [Douban OAuth doc](http://developers.douban.com/wiki/?title=oauth2#server_side_flow).
-2. Meteor [loginWith<ExternalService>](http://docs.meteor.com/#/full/meteor_loginwithexternalservice). 
+2. Meteor [loginWith\<ExternalService\>](http://docs.meteor.com/#/full/meteor_loginwithexternalservice). 
 
 Note:
 
