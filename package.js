@@ -2,7 +2,7 @@ Package.describe({
   name: 'theycallmek:douban',
   version: '0.0.1',
   summary: 'OAuth flow implementation for douban',
-  git: '',
+  git: 'https://github.com/lyslim/douban',
   documentation: 'README.md'
 });
 
