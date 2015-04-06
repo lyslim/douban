@@ -1,4 +1,4 @@
-# Meteor OAuth flow implementation for Douban
+# Meteor OAuth2 implementation with Douban
 
 Usage:
 
@@ -6,32 +6,32 @@ Usage:
 2. `Meteor add service-configuration`
 3.  Apply for [douban API key](http://developers.douban.com/apikey/apply "douban API key").
     For local test, please maintain the following callback path:
-```
-  http://127.0.0.1:3000/_oauth/douban
-```
+    ```
+      http://127.0.0.1:3000/_oauth/douban
+    ```
 
 4. Provide douban api key, secret and configuratons on server code, e.g.
-```javascript
-  ServiceConfiguration.configurations.remove({service: 'douban'});
-  ServiceConfiguration.configurations.upsert(
-    {service: 'douban'},
-    {
-      $set: {
-        clientId: DOUBAN_API_KEY,
-        secret: DOUBAN_SECRET,
-        loginStyle: 'redirect',
-        replaceLocalhost: true 
-      }
-    }
-  );
-```
+    ```javascript
+      ServiceConfiguration.configurations.remove({service: 'douban'});
+      ServiceConfiguration.configurations.upsert(
+        {service: 'douban'},
+        {
+          $set: {
+            clientId: DOUBAN_API_KEY,
+            secret: DOUBAN_SECRET,
+            loginStyle: 'redirect',
+            replaceLocalhost: true 
+          }
+        }
+      );
+    ```
 
 5. `Meteor add accounts-douban`, this will essentially install both `accounts-douban` and `douban` packages.
 
 6. Play with function `loginWithDouban` in client code, e.g.
-```javascript
-  Meteor.loginWithDouban(/*options*/, /*callback function*/); 
-```
+    ```javascript
+      Meteor.loginWithDouban(/*options*/, /*callback function*/); 
+    ```
 
 Enjoy!
 
